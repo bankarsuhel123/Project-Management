@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Project Name</th>
+            <th scope="col">Reason</th>
+            <th scope="col">Type</th>
+            <th scope="col">Division</th>
+            <th scope="col">Category</th>
+            <th scope="col">Priority</th>
+            <th scope="col">Dept.</th>
+            <th scope="col">Location</th>
+            <th scope="col">Status</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userData">
+            <th scope="row">{{user.projectName}}<br><span>{{user.startDate}} to {{user.endDate}}</span></th>
+            <td>{{user.reason}}</td>
+            <td>{{user.type}}</td>
+            <td>{{user.division}}</td>
+            <td>{{user.category}}</td>
+            <td>{{user.prioprity}}</td>
+            <td>{{user.department}}</td>
+            <td>{{user.location}}</td>
+            <td>{{user.status}}</td>
+
+
+        </tr>
+    </tbody>
+</table>

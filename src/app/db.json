@@ -1,0 +1,141 @@
+{
+  "user": [
+    {
+      "FirstName": "Suhel",
+      "LastName": "Bankar",
+      "Email": "suhelbankar98@gmail.com",
+      "userName": "646544544",
+      "password": "hbhb4849898",
+      "id": 1
+    },
+    {
+      "FirstName": "Suhel",
+      "LastName": "Bankar",
+      "Email": "suhelbankar98@gmail.com",
+      "userName": "646544544",
+      "password": "hbhb4849898",
+      "id": 2
+    },
+    {
+      "FirstName": "Suhel",
+      "LastName": "Bankar",
+      "Email": "suhelbankar98@gmail.com",
+      "userName": "44555",
+      "password": "scscdcsdc",
+      "id": 3
+    }
+  ],
+  "reason": [
+    {
+      "reason": "For Business",
+      "id": 1
+    },
+    {
+      "reason": "For Transport",
+      "id": 2
+    },
+    {
+      "reason": "For Dealarship",
+      "id": 3
+    }
+  ],
+  "type": [
+    {
+      "type": "Internal",
+      "id": 1
+    },
+    {
+      "type": "External",
+      "id": 2
+    },
+    {
+      "type": "Vendor",
+      "id": 3
+    }
+  ],
+  "division": [
+    {
+      "divison": "compressor",
+      "id": 1
+    },
+    {
+      "divison": "glass",
+      "id": 1
+    },
+    {
+      "divison": "filter",
+      "id": 1
+    }
+  ],
+  "category": [
+    {
+      "category": "Quality A",
+      "id": 1
+    },
+    {
+      "category": "Quality B",
+      "id": 2
+    },
+    {
+      "category": "Quality C",
+      "id": 3
+    }
+  ],
+  "department": [
+    {
+      "department": "Finance",
+      "id": 1
+    },
+    {
+      "department": "Quality",
+      "id": 2
+    },
+    {
+      "department": "Maintance",
+      "id": 3
+    }
+  ],
+  "priority": [
+    {
+      "priority": "High",
+      "id": 1
+    },
+    {
+      "priority": "Medium",
+      "id": 2
+    },
+    {
+      "priority": "Low",
+      "id": 3
+    }
+  ],
+  "location": [
+    {
+      "location": "Pune",
+      "id": 1
+    },
+    {
+      "location": "Nashik",
+      "id": 2
+    },
+    {
+      "location": "chandrapur",
+      "id": 3
+    }
+  ],
+  "userData": [
+    {
+      "projectName": "n nm ",
+      "reason": "For Business",
+      "type": "Internal",
+      "category": "Quality A",
+      "department": "Finance",
+      "division": "compressor",
+      "prioprity": "High",
+      "location": "Pune",
+      "startDate": "2023-02-08",
+      "endDate": "2023-02-13",
+      "id": 1
+    }
+  ]
+}

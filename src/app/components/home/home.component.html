@@ -1,0 +1,46 @@
+<form [formGroup]="projectFrom">
+    <input type="text" style="border: 2px solid red;" formControlName="projectName">
+    <br>
+    <select formControlName="reason">
+        <option *ngFor="let data of reasonData" [value]="data.reason">
+            {{data.reason}}
+        </option>
+    </select>
+    <select formControlName="type">
+        <option *ngFor="let data of typeData" [value]="data.type">
+            {{data.type}}
+        </option>
+    </select>
+    <select formControlName="division">
+        <option *ngFor="let data of divisionData" [value]="data.divison">
+            {{data.divison}}
+        </option>
+    </select>
+    <select formControlName="category">
+        <option *ngFor="let data of categoryData" [value]="data.category">
+            {{data.category}}
+        </option>
+    </select>
+    <select formControlName="prioprity">
+        <option *ngFor="let data of priorityData" [value]="data.priority">
+            {{data.priority}}
+        </option>
+    </select>
+    <select formControlName="department">
+        <option *ngFor="let data of departmentData" [value]="data.department">
+            {{data.department}}
+        </option>
+    </select>
+    <select formControlName="location">
+        <option *ngFor="let data of locationData" [value]="data.location">
+            {{data.location}}
+        </option>
+    </select>
+    <input type="date" formControlName="startDate">
+    <input type="date" formControlName="endDate">
+    <ng-container *ngFor="let data of statusData">
+        <h5>{{data.status}}</h5>
+
+    </ng-container>
+    <button (click)="onSubmit(projectFrom.value)">Submit</button>
+</form>

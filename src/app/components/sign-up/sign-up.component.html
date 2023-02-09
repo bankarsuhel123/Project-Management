@@ -1,0 +1,89 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Sign Up</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="signUpForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field"
+                                    [class.error]="signUpForm.controls['FirstName'].dirty && signUpForm.hasError('required','FirstName')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="Firstname" formControlName="FirstName">
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['FirstName'].dirty && signUpForm.hasError('required','FirstName')"
+                                class="text-danger">*Requird
+                                Fields</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field"
+                                    [class.error]="signUpForm.controls['LastName'].dirty && signUpForm.hasError('required','LastName')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="Lastname" formControlName="LastName">
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['LastName'].dirty && signUpForm.hasError('required','LastName')"
+                                class="text-danger">*Requird Fields</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field"
+                                    [class.error]="signUpForm.controls['Email'].dirty && signUpForm.hasError('required','Email')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="email" placeholder="Email" formControlName="Email">
+                                </div>
+                            </div>
+                            <small *ngIf="signUpForm.controls['Email'].dirty && signUpForm.hasError('required','Email')"
+                                class="text-danger">*Email Is Requird</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field"
+                                    [class.error]="signUpForm.controls['userName'].dirty && signUpForm.hasError('required','userName')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="Username" formControlName="userName">
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['userName'].dirty && signUpForm.hasError('required','userName')"
+                                class="text-danger">*Username is Requird</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field"
+                                    [class.error]="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input [type]="type" placeholder="Password" formControlName="password">
+                                    <span (click)="hideShowPass()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                            </div>
+                            <small
+                                *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')"
+                                class="text-danger">*Password Is Requird</small>
+                            <!-- <div class="form-inline fr mt-4">
+                                <a id="forget" class="font-weight-bold">Forget Password</a>
+                            </div> -->
+                            <button type="submit" class="btn btn-primary btn-block mt-4 w-100"
+                                (click)="signUpSubmit(signUpForm.value)">Sign Up</button>
+                            <div class="text-center pt-4 text-muted">Already have account?
+                                <a id="forget" routerLink="/login">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="mx-3 my-2 py-2 bordert">
+                        <div class="text-center py-3">
+                            <a href="https://www.facebook.com/" target="_blank" class="px-2"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDppYsRIBanbnMP28hHwcQYeBVM2TsQ4UMA&usqp=CAU"
+                                    alt=""></a>
+                            <a href="https://www.google.com/" target="_blank" class="px-2"><img
+                                    src="data:image/png;base64,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"
+                                    alt=""></a>
+                            <a href="https://github.com/" target="_blank" class="px-2"><img
+                                    src="data:image/png;base64,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"
+                                    alt=""></a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
